@@ -45,6 +45,15 @@ bool testSwap()
   return r[0] == 1 && v[0] == 2;
 }
 
+bool testPushFront()
+{
+  topit::Vector< int > v;
+  v.pushBack(1);
+  v.pushBack(2);
+  v.pushFront(3);
+  return v[0] == 3 && v[1] == 1 && v[2] == 2;
+}
+
 int main()
 {
   using test_t = bool (*)();
